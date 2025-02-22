@@ -26,6 +26,22 @@ public class HelloController {
         return "Hello " + name + " from BridgeLabz";
     }
 
+    //UC_04
+// todo - Use POST Request Method and pass first name and last name in the Body
+//todo.  Create User DTO Bean with firstName and lastName as   attributes.
+
+    @PostMapping("/post")
+    public String greetUser(@RequestBody UserDTO userDTO) {
+        return "Hello " + userDTO.getFirstName() + " " + userDTO.getLastName() + " from BridgeLabz";
+    }
+
+    @GetMapping("/get")
+    public String getUser(@RequestBody UserDTO userDTO) {
+        return "Hello " + userDTO.getFirstName() + " " + userDTO.getLastName() + " from BridgeLabz";
+    }
+
+
+
 
 }
 
