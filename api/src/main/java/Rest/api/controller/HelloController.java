@@ -13,7 +13,14 @@ public class HelloController {
         return "Hello from BridgeLabz";
     }
 
-
+    //UC_02
+    // GET Request with Query Parameter - Responds with "Hello <name> from BridgeLabz"
+    @GetMapping("/query")
+    public String sayHelloWithName(@RequestParam("q") String name) {
+        return "Hello " + name + " from BridgeLabz";
     }
+
+
+}
 
 
