@@ -19,6 +19,12 @@ public class HelloController {
     public String sayHelloWithName(@RequestParam("q") String name) {
         return "Hello " + name + " from BridgeLabz";
     }
+    //UC_03
+    //Use GET Request Method and pass name as path variable
+    @GetMapping("/param/{name}")
+    public String sayHello(@PathVariable String name) {
+        return "Hello " + name + " from BridgeLabz";
+    }
 
 
 }
