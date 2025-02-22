@@ -40,7 +40,16 @@ public class HelloController {
         return "Hello " + userDTO.getFirstName() + " " + userDTO.getLastName() + " from BridgeLabz";
     }
 
+//UC05
 
+    /* todo: Make REST Call to show Hello Mark Taylor from BridgeLabz -  Use PUT Request Method and pass first name as Path Variable and last name as Query Parameter */
+
+    @PutMapping("/put/{firstName}")
+    public String sayHello(@PathVariable String firstName, @RequestParam String lastName) {
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz";
+
+
+    }
 
 
 }
